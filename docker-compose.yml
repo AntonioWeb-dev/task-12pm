@@ -1,0 +1,12 @@
+version: "3.1"
+
+services:
+  apiserver:
+    build: apiserver/
+    command: bash -c "node server.js"
+    ports:
+      - "8083:8083"
+  frontend-react:
+    build: front-end/
+    ports:
+      - "3000:3000"
